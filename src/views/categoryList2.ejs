@@ -16,7 +16,7 @@
         <div class="row categ-pad">     
           <!-- Left column with filters large size-->
           <section class="col-12 col-md-3 col-lg-2 mt-1rem categ-left-section">   
-            <form class="form-control p-3" action="/filterProduct/<%= categoriaId %>" method="POST" enctype="form-data" id="formulario">  
+            <form class="form-control p-3" action="/filterProduct" method="POST" enctype="form-data" id="formulario">  
               <div class="price-input">
                 <div class="field price-mg d-flex">                             
                   <input name="precioMinimo" type="number" class="input-min" value="<%=locals.oldData  && locals.oldData[0].precioMinimo ? locals.oldData[0].precioMinimo : null%>" placeholder="Min">

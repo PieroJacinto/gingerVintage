@@ -135,6 +135,6 @@ module.exports = {
       const cumpleFiltros = cumplePrecioMaximo && cumplePrecioMinimo && cumpleTalle && cumpleCategorias;
       if(cumpleFiltros)productosCategoria.push(producto)
     } 
-    res.render('categoryList2', { productosCategoria, categoriaId, filtros,atributos, oldData: [req.body]})    
+    res.render('productosFiltrados', { productosCategoria, categoriaId, filtros,atributos, oldData: [req.body]})    
   }  
 };
