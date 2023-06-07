@@ -106,10 +106,8 @@ module.exports = {
     if (req.body.precioMaximo != undefined) {
       req.session.filtros = await req.body
     }
-    const filtros = req.session.filtros
-    const tallesBuscados = filtros.talle  
-    console.log(filtros);
-
+    const filtros = req.session.filtros    
+   
     //INICIALIZAMOS LA VARIABLE ATRIBUTOS COMO UN OBJETO VACIO
     let atributos = {}  
     // FILTROS QUE QUEREMOS APLICAR
@@ -137,6 +135,6 @@ module.exports = {
       const cumpleFiltros = cumplePrecioMaximo && cumplePrecioMinimo && cumpleTalle && cumpleCategorias;
       if(cumpleFiltros)productosCategoria.push(producto)
     } 
-    res.render('categoryList2', { productosCategoria, categoriaId, filtros,atributos})    
+    res.render('categoryList2', { productosCategoria, categoriaId, filtros,atributos, oldData: [req.body]})    
   }  
 };
