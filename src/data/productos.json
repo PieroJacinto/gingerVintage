@@ -206,16 +206,6 @@
     "imagen": ["accesorios.png"],
     "destacados": false,
     "descuento": 0
-  },
-  {
-    "titulo": "zapatillas jordan",
-    "precio": "23000",
-    "descripcion": "zapatallias alta flama",
-    "categoriaId": "1",
-    "talle": "S",
-    "medidas": "asasassa",
-    "id": 17,
-    "categorias": "Calzado",
-    "imagen": ["1686168819679IMG_20230531_164727703_HDR.jpg"]
   }
+
 ]
