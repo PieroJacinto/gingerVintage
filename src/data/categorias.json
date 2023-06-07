@@ -1,0 +1,52 @@
+[
+    {
+        "id" : 1,
+        "nombreCategoria" : "Calzado",
+        "imagenCategoria" : "shoes.png"
+    },
+    {
+        "id" : 2,
+        "nombreCategoria" : "Camisas/Blusas",
+        "imagenCategoria" : "camisa.png"
+    },
+    {
+        "id" : 3,
+        "nombreCategoria" : "Faldas",
+        "imagenCategoria" : "faldavint.png"
+    },
+    {
+        "id" : 4,
+        "nombreCategoria" : "Pantalones",
+        "imagenCategoria" : "pantalon.png"
+    },
+    {
+        "id" : 5,
+        "nombreCategoria" : "Pilotos",
+        "imagenCategoria" : "piloto.png"
+    },
+    {
+        "id" : 6,
+        "nombreCategoria" : "Sacos/Tapados",
+        "imagenCategoria" : "sacopng.png"
+    },
+    {
+        "id" : 7,
+        "nombreCategoria" : "Shorts/Bermudas",
+        "imagenCategoria" : "short_2.png"
+    },
+    {
+        "id" : 8,
+        "nombreCategoria" : "Sweaters",
+        "imagenCategoria" : "sweater.png"
+    },
+    {
+        "id" : 9,
+        "nombreCategoria" : "Vestidos",
+        "imagenCategoria" : "vestido.png"
+    },
+    {
+        "id" : 10,
+        "nombreCategoria" : "Accesorios",
+        "imagenCategoria" : "accesorios.png"
+    }
+]

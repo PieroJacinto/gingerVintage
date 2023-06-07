@@ -1,0 +1,28 @@
+@media (min-width: 1200px) {
+    /* HEADER */
+
+    .logo {
+        width: 55%;       
+    }
+    .header-txt {
+        font-size: large;    
+    }
+    .header-icons {
+        font-size: 30px;
+        padding-right: 8%;
+    }    
+
+    /* FOOTER */
+    .footer-titles {
+        font-size: medium;
+    }
+    .footer-text {
+        font-size: small;
+    }
+    .footer-icons {
+        font-size: 1.5rem;
+    }
+
+    /* CATEGORY LIST */
+   
+}

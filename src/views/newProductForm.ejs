@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head') %>
+    </head>
+<body>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <%- include('./partials/header') %>
+        </header>   
+        <main class="p-5">
+
+            <h4> Cargar nuevo producto </h4>
+
+            <form class="form-control p-5" action="/newProduct" method="POST" enctype="multipart/form-data" id="formulario">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Titulo del producto</label>
+                    <input name="titulo" type="text" class="form-control" id="titulo" placeholder="Titulo del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Precio</label>
+                    <input name="precio" type="number" class="form-control" id="precio" placeholder="Precio">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label mt-3">Descripcion del producto</label>
+                    <textarea name="descripcion" class="form-control" id="descripcion" rows="3"></textarea>
+                </div>
+                <select name="categoriaId" id="categoria" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona la categoria</option>
+                    <% if (categorias != undefined) { %> 
+                        <% categorias.forEach(categoria => { %>  
+                          <option value="<%= categoria.id %>"><%= categoria.nombreCategoria %></option>
+                        <% }) %> 
+                    <% } %> 
+
+                </select>
+                <div class="mt-3">
+                <select name="talle" id="categoria" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona un talle</option>
+                    <option >XS</option>
+                    <option >S</option>
+                    <option >M</option>
+                    <option >L</option>
+                    <option >XL</option>
+                    <option >XXL</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label mt-3">Medidas del producto</label>
+                    <textarea name="medidas" class="form-control" id="medidas" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Fotos del producto</label>
+                    <input name="fotosDelProducto" class="form-control" type="file" id="fotosDelProducto" multiple>
+                </div>
+
+                <div class="mt-4 mb-4 d-flex justify-content-center">
+                    <a href=""><button class="cart-button" type="submit"> Agregar producto </button></a>
+                </div>
+            </form>    
+        </main>
+        
+        <footer>
+            <%- include('./partials/footer') %>
+        </footer>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+@media (min-width: 576px) { 
+    /* HEADER */
+
+    .logo {
+        width: 40%;       
+    }   
+
+    /* FOOTER */
+
+    .footer-titles {
+        font-size: x-small;
+    }
+ }

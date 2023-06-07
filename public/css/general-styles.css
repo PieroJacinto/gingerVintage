@@ -1,0 +1,34 @@
+
+/* PADDING */
+.pd-10 {
+    padding: 10px
+}
+.pd-5 {
+    padding: 5px
+}
+
+/* MARGIN */
+.mg-10 {
+    margin: 10px
+}
+.mg-5 {
+    margin: 5px;
+}
+.mg-l-5 {
+    margin-left: 5px;
+}
+.mg-t-5 {
+    margin-top: 5px
+}
+
+/* WIDTH */
+
+.w-90 {
+    width: 90% ;
+}
+
+/* PADDING */
+.pl-05r {
+    padding-left: 0.5rem;
+}
+

@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+    /* HEADER */
+
+    .logo {
+        width: 50%;       
+    }    
+    .header-icons {
+        padding-right: 5%;
+    } 
+    /* cat cards  */
+    .cat-txt {
+        font-size: 1.3vh;
+    }
+    /* Intagram gallery */
+    .image{
+        min-width: 33.3%;  
+        position: relative;
+        aspect-ratio: 3/4;
+    }
+    /* category list */
+   
+
+    .price-input{
+        flex-direction: column;
+     }
+    .price-input .separator {
+        display: none;
+    }
+    .price-mg{
+        margin-bottom: 1rem;
+    }
+    .field input{
+        font-size: 100%;
+    }
+    .filters-mobile{
+        display: none;
+    }
+
+    
+}

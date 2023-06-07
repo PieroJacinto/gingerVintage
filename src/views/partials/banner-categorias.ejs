@@ -1,0 +1,49 @@
+<div class="row cat-pad">
+    <div class="col d-md-none">
+        <a href="/category">
+            <img 
+                src= "images/Ginger Maisson Vintage mobile 3.png"
+                alt="Esto es una imagen de una tela rosa de piel sintetica" 
+                class="w-100">
+        </a>
+    </div>
+    <div class="d-none d-md-flex col-md-4 ban-pad">        
+        <a href="/">
+            <img 
+                src= "images/Ginger Maisson Vintage desktop.png"
+                alt="Esto es una imagen de una tela rosa de piel sintetica" 
+                class="w-90">
+        </a>
+    </div>
+    <div class="col-md-8 mt-3 mt-md-0">
+        <div class="row flex-wrap">                        
+            <div class="container">
+                <div class="row g-2 g-lg-3 justify-content-center">
+                    <% for (const categoria of categorias) { %>
+                        
+                        <div class="col-6 col-md-3">                        
+                            <div class="card categ-celeste">
+                                <!-- Ancor que toma toda la card -->
+                                <a href="/<%= categoria.id%>" class="ancor">
+                                    <div class="card-body opacity" >
+                                        <div>
+                                            <img src="images/ropa/<%= categoria.imagenCategoria %>" alt="" class="text-center ratio-square">
+                                        </div>
+                                        <div class="position-absolute top-50 start-50 translate-middle w-100 cat-name p-2">
+                                            <!-- Ancor que toma solo la tira de texto -->
+                                            <a href="/<%= categoria.id %>" class="cat-txt">
+                                                <%= categoria.nombreCategoria %>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>                        
+                        </div>
+
+                   <% } %>
+                   
+                </div>
+            </div>
+        </div>
+    </div>              
+</div>

@@ -1,0 +1,46 @@
+@media (min-width: 992px) {
+    /* MAIN */
+    .section-pad {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    /* category list */
+    .categ-pad {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .price-input{
+       flex-direction: column;
+    }
+    .field input{
+        font-size: 125%;
+    }
+  
+
+    /* HEADER */
+    .header-pad {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .logo {
+        width: 60%;       
+    }
+    .header-txt {
+        font-size: small;    
+    }
+     /* cat cards  */
+     .cat-txt {
+        font-size: 2vh;
+    }
+    /* Intagram gallery */
+    .image{
+        min-width: 20%;  
+        position: relative;
+        aspect-ratio: 3/4;
+    }
+    /* DETALLE DE PRODUCTO */
+    .max-w-detail{
+        max-width: 40rem;
+    }
+   
+ }

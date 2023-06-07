@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <%- include('./partials/header') %>
+    </header>   
+
+     <!-- MAIN -->
+     <main>
+        <img src="images/ropa/pantalon.png" alt="" srcset="">
+        <div class="container-fluid">
+            <div class="row">                
+                <div class="col-12 col-lg-6 p-5">
+                                          
+                    
+                    
+                    <div class="col-12  max-w-detail" id="productGallery">                       
+                        <div class="swiffy-slider slider-item-ratio slider-item-ratio-1x1 slider-nav-round slider-nav-nodelay" id="pgallery">
+                         
+                            
+                            <ul class="slider-container">
+                                <% for (let index = 0; index < productoBuscado.imagen.length; index++) { %>
+                                <% const imagen = productoBuscado.imagen[index]; %>                           
+                                <li><img src="../images/ropa/<%= imagen %>" data-bs-toggle="modal" data-bs-target="#productGalleryModal" onclick=  "imageClick(<%= (index) %>)"></li>
+                                <% } %>
+                               
+                            </ul>
+                    
+                            <button type="button" class="slider-nav" aria-label="Go previous"></button>
+                            <button type="button" class="slider-nav slider-nav-next" aria-label="Go next"></button>
+                        </div>                    
+                        <div class="swiffy-slider slider-nav-dark slider-nav-sm slider-nav-chevron slider-item-show4 slider-item-snapstart slider-item-ratio slider-item-ratio-1x1 slider-nav-visible slider-nav-page slider-nav-outside-expand pt-3  d-lg-block">
+                            <ul class="slider-container" id="pgallerythumbs" style="cursor:pointer">
+                                <% if (productoBuscado.imagen.length > 1) { %>                                    
+                                    <% for (let index = 0; index < productoBuscado.imagen.length; index++) { %>
+                                        <% const imagen = productoBuscado.imagen[index]; %>
+                                          
+                                        <li><img src="../images/ropa/<%= imagen %>" loading="lazy" alt="..." onmouseover="thumbHover(<%=(index)%>)"></li>                                
+                                    <% } %>                               
+                            </ul>
+                            <button type="button" class="slider-nav" aria-label="Go previous"></button>
+                            <button type="button" class="slider-nav slider-nav-next" aria-label="Go next"></button>
+                                <% } %>
+                        </div>              
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-6 p-5 d-flex flex-d flex-column justify-content-center">
+                        <h3> <%= productoBuscado.titulo %> </h3>
+                    <h5> $<%= productoBuscado.precio %> </h5>
+                    <div>
+                        <P> <%= productoBuscado.descripcion %> </P>
+                        <p> Talle: <%= productoBuscado.talle %></p>
+                        <P> Medidas en cm: </P> 
+                        <pre style="font-family: inherit;"> <%= productoBuscado.medidas %> </pre>                        
+                         
+                        <div class="mt-4 mb-4">
+                            <a href=""><button class="cart-button"> Agregar al carrito </button></a>
+                        </div>
+                        <div class="d-flex">
+                            <a href="">
+                                <i class="fa-brands fa-facebook footer-icons redes-icon"></i>                   
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-instagram footer-icons redes-icon mx-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+     </main>
+     <script src="../js/productSlider.js"></script>
+     <!-- BOOTSRAP ENDING LINE -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+        crossorigin="anonymous">
+    </script>    
+
+    <!-- FOOTER -->
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+    
+</body>
+</html>
