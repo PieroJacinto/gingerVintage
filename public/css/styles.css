@@ -527,3 +527,88 @@ color:white;
 border: none;
 margin: 1rem;
 }
+
+/* boton detalle producto */
+.contenedor-sumar-producto{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 2rem;
+}
+.sumar-restar-producto{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;   
+    align-items: center;
+    margin-right: 2rem;
+}
+#btn-restar, #btn-sumar {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 1.5rem ;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background-color: white;
+    border: solid 3px #FFA17B;
+}
+#btn-restar{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#btn-sumar{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#contador {    
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 3px #FFA17B;
+    border-top: solid 3px #FFA17B;
+    border-left: none;
+    border-right: none;
+}
+.sumar-restar-boton{
+    background: #FFA17B;
+    padding: 0.7rem 3rem;
+    color:white;
+    border-radius: 5px;
+    border: none
+}
+/* CARRITO DE COMPRAS */    
+.price{
+    font-size: 20px;
+    font-weight: 500;
+}
+.total{
+    display: flex;
+    justify-content: end;    
+    font-weight: 600;
+    font-size: 18px;
+}
+.boton-eliminar-carrito{
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    color: red;
+}
+#quantity {
+    border-radius: 5px;
+    max-width: 2rem;
+    border: #FFA17B solid
+}
+.mrg-t-4 {
+    margin-top: 4rem;
+}
+.mrg-t-1 {
+    margin-top: 1rem;
+}
+.boton-filtros {
+    background: #9DD6DF;
+    border-radius: 5px;
+    padding: 0.7rem 3rem;
+    color:white;
+    border: none
+}

@@ -1,0 +1,23 @@
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    // Hacemos responsive el carosuel, seteando la cantidad de items q se muestran en cada media query
+    responsive:{
+        0:{
+            items:1
+        },
+        576:{
+            items:2
+        },
+        768:{
+            items:3
+        },
+        992:{
+            items:4
+        },
+        1200:{
+            items:6
+        }
+    }
+})

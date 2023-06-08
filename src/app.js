@@ -36,6 +36,7 @@ app.use(session({
     secret: 'secret',    
 }));
 
+app.use(require("./middlewares/carrito"))
 
 //REQUERIMOS EL ROUTEADOR PRINCIPAL
 const mainRouter = require("./routers/main-router");

@@ -15,6 +15,10 @@ router.get("/newProduct", mainController.newProduct);
 //Carga de informacion para nuevo producto
 router.post("/newProduct", multerMiddleware.array("fotosDelProducto", 10), mainController.chargeProduct)
 
+router.get("/carrito",mainController.carrito)
+router.post('/carrito/agregar',mainController.agregarCarrito)
+router.post('/carrito/eliminar',mainController.eliminarCarrito)
+
 //PRODUCT FILTER
 router.get("/filterProduct", mainController.filterProduct);
 router.post("/filterProduct", mainController.filterProduct);
@@ -23,4 +27,3 @@ router.post("/filterProduct", mainController.filterProduct);
 router.get("/detail/:id", mainController.productDetail);
 
 router.get("/:categoriaId", mainController.categoryList); 
-

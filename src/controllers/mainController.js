@@ -98,6 +98,7 @@ module.exports = {
     res.redirect("/");
     
 },
+
   filterProduct: async (req, res) => {
 
     const categoriaId = await req.params.categoriaId
@@ -136,5 +137,36 @@ module.exports = {
       if(cumpleFiltros)productosCategoria.push(producto)
     } 
     res.render('productosFiltrados', { productosCategoria, categoriaId, filtros,atributos, oldData: [req.body]})    
+  },
+  agregarCarrito : async (req,res) => {
+    //encontramos el producto en la base de datos y la cantidad que agrego el usuario    
+     
+    let product = one(req.body.id);
+    console.log(product);
+    // Comprobamos si el producto existe en el carrito
+    if (req.session.cart.find(item => item.id == product.id)){
+        // Caso 1: existe y actualizamos cantidad
+        req.session.cart = req.session.cart.map(item => {
+            if (item.id == product.id) {
+                item.quantity = 1
+            }
+            return item
+        })
+    }else {
+        // Caso 2:agregamops el carrito y seteamos la cantidad
+        req.session.cart.push({...product, quantity:1 })
+    }    
+    
+    // console.log(req.session.cart);
+    return res.redirect("/carrito")
+  }, 
+  eliminarCarrito: async (req,res) => {
+    req.session.cart = req.session.cart.filter(item => item.id != req.body.id)
+        return res.redirect("/carrito")
+  },
+
+  carrito: async ( req, res ) => {
+    let productoCarro = req.session.cart 
+    res.render("carrito-de-compras", { productoCarro })
   }  
 };
