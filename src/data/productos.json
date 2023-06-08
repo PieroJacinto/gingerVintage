@@ -21,7 +21,7 @@
     "descripcion": "Vestido en excelente estado, recuperado recientemente",
     "talle": "m",
     "medidas": "Largo: 80cm.  Cintura: 70cm",
-    "imagen": ["vestido.png"],
+    "imagen": ["vestido.png", "calzado.jpg","accesorios.png"],
     "destacados": false,
     "descuento": 0
   },

@@ -13,12 +13,9 @@
      <main>
         <img src="images/ropa/pantalon.png" alt="" srcset="">
         <div class="container-fluid">
-            <div class="row">                
-                <div class="col-12 col-lg-6 p-5">
-                                          
-                    
-                    
-                    <div class="col-12  max-w-detail" id="productGallery">                       
+            <div class="row ">                
+                <div class="col-12 col-lg-6 p-5 prod-img-pad detail-card">                                         
+                   <div class="col-12  max-w-detail" id="productGallery">                       
                         <div class="swiffy-slider slider-item-ratio slider-item-ratio-1x1 slider-nav-round slider-nav-nodelay" id="pgallery">
                          
                             
@@ -60,14 +57,14 @@
                         
                         <form class="" action="/carrito/agregar" method="POST" enctype="form-data" id="form-agregar-producto">
                                                     
-                                <div>
+                                <div class="mrg-bt-1 boton-agregar">
                                     <input type="hidden" name="id" value="<%= productoBuscado.id %>" />                            
                                     <button class="sumar-restar-boton" type="submit"> Agregar </button>
                                 </div>
                            
                         </form>           
                        
-                        <div class="d-flex">
+                        <div class="d-flex ">
                             <a href="">
                                 <i class="fa-brands fa-facebook footer-icons redes-icon"></i>                   
                             </a>

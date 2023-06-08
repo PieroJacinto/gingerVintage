@@ -40,7 +40,14 @@
     }
     /* DETALLE DE PRODUCTO */
     .max-w-detail{
-        max-width: 40rem;
+        max-width: 30rem;
+    }
+    .boton-agregar{
+        display: flex;
+        justify-content: start;
+    }
+    .prod-img-pad{
+        padding-left: 10rem !important;
     }
    
  }
