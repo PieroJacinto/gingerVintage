@@ -20,7 +20,7 @@ router.post('/carrito/agregar',mainController.agregarCarrito)
 router.post('/carrito/eliminar',mainController.eliminarCarrito)
 
 //PRODUCT FILTER
-router.get("/filterProduct", mainController.filterProduct);
+
 router.post("/filterProduct", mainController.filterProduct);
 
 //PRODUCT DETAIL

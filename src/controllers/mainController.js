@@ -123,7 +123,7 @@ module.exports = {
         if (!(producto[atributo] in atributos[atributo]))atributos[atributo][producto[atributo]] = 1;
         else atributos[atributo][producto[atributo]] += 1;
       }        
-    }   
+    }       
 
     productosCategoria = [];    
     for (let index = 0; index < productos.length; index++) {

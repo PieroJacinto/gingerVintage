@@ -30,70 +30,69 @@
                   <div class="range-input">
                     <input type="range" class="range-min" min="0" max="30000" value="7500" step="100">
                     <input type="range" class="range-max" min="0" max="30000" value="22500" step="100">
-                  </div> 
-    
-                    <!-- CHECBOX TALLES -->  
-                    <h5 class="mt-3">Talle</h2>
-                      <% for (const [atributo, filtros] of Object.entries(atributos)){ %>                               
-                               
-                        <hr style="margin-top: 1.75rem;">
-                        <h5 class="filtro-subtitulo"><%= atributo.substring(0,1).toUpperCase()+ atributo.substring(1).toLowerCase() %></h5>
-                        <% for (const [filtro, cantidad] of Object.entries(filtros)){ %> 
-                          <% if (filtro != "null") { %>                    
-                            <div class="form-check">
-                                <input name="<%= atributo %>" class="form-check-input" type="checkbox" value="<%= filtro %>" id="flexCheckDefault"
-                                <% if (locals.oldData) { %>
-                                  <% var oldFiltro2 = [] %>
-                                  <% for (const [oldAtributo, oldFiltros] of Object.entries(locals.oldData[0])){ %> 
-                                    <% oldFiltros != "" ? oldFiltro2.push(oldFiltros) : "" %>                    
-                                  <% } %>                   
-                                  <% oldFiltro2.forEach(element => {  %>
-                                    <%= element.includes(filtro) ? "checked" : null %>
-                                  <% }) %>                                       
-                                <% } %>          
-                                >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <%= filtro %> (<%= cantidad %>)
-                                </label>
-                            </div>           
-                          <% } %>                                   
-                        <% } %>
-                    <% } %>        
-    
-                    <div class="mt-4 mb-4 d-flex justify-content-center">
-                      <button class="cart-button" type="submit"> Aplicar filtos </button>
-                    </div>
-    
-                  </form>
-              </section>
-    
-              <!-- right column with category items -->
-              <section class="col-12 col-md-9 col-lg-10">
-                <div class="row justify-content-center">
-                 <% for (const producto of productosCategoria) { %>
-                    <div class="col-12 col-md-3">
-                        <a href="/detail/<%=producto.id%>" class="ancor">
-                          <div class="card-body position-relative gris-claro mt-3 mb-2 zoom">
-                              <div>
-                                  <img src="/images/ropa/<%=producto.imagen[0]%>" alt="" class="text-center ratio-square-recomendaciones p-4">
-                                  <a href="/detail/<%= producto.id %>" class="p-2 position-absolute bottom-0 start-50 translate-middle-x categ-celeste w-100 text-center cat-txt">
-                                    Ver
-                                  </a>
-                              </div>
-                          </div>
-                          <a href="/detail/<%= producto.id %>" class="">                
-                            <span><%=producto.titulo%></span> 
-                            <br>
-                            <span class="bold">$<%=producto.precio%></span>              
-                        </a>
-                    </div>              
-                 <% } %>           
-    
+                  </div>    
+                    
+                    
+                  <% for (const [atributo, filtros] of Object.entries(atributos)){ %>                               
+                            
+                    <hr style="margin-top: 1.75rem;">
+                    <h5 class="filtro-subtitulo"><%= atributo.substring(0,1).toUpperCase()+ atributo.substring(1).toLowerCase() %></h5>
+                    <% for (const [filtro, cantidad] of Object.entries(filtros)){ %> 
+                      <% if (filtro != "null") { %>                    
+                        <div class="form-check">
+                            <input name="<%= atributo %>" class="form-check-input" type="checkbox" value="<%= filtro %>" id="flexCheckDefault"
+                            <% if (locals.oldData) { %>                              
+                              <% var oldFiltro2 = [] %>
+                              <% for (const [oldAtributo, oldFiltros] of Object.entries(locals.oldData[0])){ %> 
+                                <% oldFiltros != "" ? oldFiltro2.push(oldFiltros) : "" %>                    
+                              <% } %>                                                                          
+                              <% oldFiltro2.forEach( element => {  %>                                
+                                <%= element.includes(filtro) ? "checked" : null %>                                
+                              <% }) %>                                       
+                            <% } %>          
+                            >
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <%= filtro %> (<%= cantidad %>)
+                            </label>
+                        </div>           
+                      <% } %>                                   
+                    <% } %>
+                <% } %>        
+
+                <div class="mt-4 mb-4 d-flex justify-content-center">
+                  <button class="cart-button" type="submit"> Aplicar filtos </button>
                 </div>
-              </div>
-              </section>
+
+              </form>
+          </section>
+
+          <!-- right column with category items -->
+          <section class="col-12 col-md-9 col-lg-10">
+            <div class="row justify-content-center">
+              <% for (const producto of productosCategoria) { %>
+                <div class="col-12 col-md-3">
+                    <a href="/detail/<%=producto.id%>" class="ancor">
+                      <div class="card-body position-relative gris-claro mt-3 mb-2 zoom">
+                          <div>
+                              <img src="/images/ropa/<%=producto.imagen[0]%>" alt="" class="text-center ratio-square-recomendaciones p-4">
+                              <a href="/detail/<%= producto.id %>" class="p-2 position-absolute bottom-0 start-50 translate-middle-x categ-celeste w-100 text-center cat-txt">
+                                Ver
+                              </a>
+                          </div>
+                      </div>
+                      <a href="/detail/<%= producto.id %>" class="">                
+                        <span><%=producto.titulo%></span> 
+                        <br>
+                        <span class="bold">$<%=producto.precio%></span>              
+                    </a>
+                </div>              
+              <% } %>           
+
             </div>
-          </div>      
+          </div>
+          </section>
+        </div>
+      </div>      
     </main>
     
     <!-- FOOTER -->
