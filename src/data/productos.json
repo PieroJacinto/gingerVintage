@@ -21,8 +21,8 @@
     "descripcion": "Vestido en excelente estado, recuperado recientemente",
     "talle": "m",
     "medidas": "Largo: 80cm.  Cintura: 70cm",
-    "imagen": ["vestido.png", "calzado.jpg","accesorios.png"],
-    "destacados": false,
+    "imagen": ["vestido.png", "calzado.jpg", "accesorios.png"],
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -48,7 +48,7 @@
     "talle": 36,
     "medidas": null,
     "imagen": ["shoes.png"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -74,7 +74,7 @@
     "talle": "xl",
     "medidas": "Mangas: 40cm. Largo: 60cm.  Hombros: 70cm",
     "imagen": ["camisa.png"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -126,7 +126,7 @@
     "talle": "xl",
     "medidas": "Mangas: 40cm. Largo: 60cm.  Hombros: 70cm",
     "imagen": ["piloto.png"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -139,7 +139,7 @@
     "talle": "xl",
     "medidas": "Mangas: 40cm. Largo: 60cm.  Hombros: 70cm",
     "imagen": ["sacos2.jpg"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -152,7 +152,7 @@
     "talle": "l",
     "medidas": "Mangas: 40cm. Largo: 60cm.  Hombros: 70cm",
     "imagen": ["sacos.jpg"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -191,7 +191,7 @@
     "talle": "m",
     "medidas": "Largo: 90cm.  Cintura: 80cm",
     "imagen": ["tapado-ging.png"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   },
   {
@@ -204,8 +204,8 @@
     "talle": null,
     "medidas": null,
     "imagen": ["accesorios.png"],
-    "destacados": false,
+    "destacados": true,
     "descuento": 0
   }
-
+ 
 ]

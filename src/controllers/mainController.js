@@ -25,11 +25,11 @@ module.exports = {
        console.log("Error en el servicio de Instagram: " + error);
       instaData = null;
     }
-
+    const destacados = productos.filter(producto => producto.destacados == true)    
     //TRAER PRODUCTOS(ULTIMOS RESCATES) DE LA BASE DE DATOS
     const productoUltimosRescates = (productos.slice(productos.length - 10)).reverse()   
     
-    res.render("home", { instaData, productos, categorias, productoUltimosRescates });
+    res.render("home", { instaData, productos, categorias, productoUltimosRescates, destacados });
   },
 
   productDetail: async (req, res) => {
@@ -60,8 +60,7 @@ module.exports = {
          if (!(producto[atributo] in atributos[atributo]))atributos[atributo][producto[atributo]] = 1;
          else atributos[atributo][producto[atributo]] += 1;
        }        
-     }   
-     console.log(atributos);
+     }        
     res.render('categoryList2', { productosCategoria, categoriaId, atributos})
   },
 
@@ -141,8 +140,7 @@ module.exports = {
   agregarCarrito : async (req,res) => {
     //encontramos el producto en la base de datos y la cantidad que agrego el usuario    
      
-    let product = one(req.body.id);
-    console.log(product);
+    let product = one(req.body.id);    
     // Comprobamos si el producto existe en el carrito
     if (req.session.cart.find(item => item.id == product.id)){
         // Caso 1: existe y actualizamos cantidad

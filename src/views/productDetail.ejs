@@ -55,13 +55,11 @@
                         <P> Medidas en cm: </P> 
                         <pre style="font-family: inherit;"> <%= productoBuscado.medidas %> </pre>                        
                         
-                        <form class="" action="/carrito/agregar" method="POST" enctype="form-data" id="form-agregar-producto">
-                                                    
+                        <form class="" action="/carrito/agregar" method="POST" enctype="form-data" id="form-agregar-producto">                                                    
                                 <div class="mrg-bt-1 boton-agregar">
                                     <input type="hidden" name="id" value="<%= productoBuscado.id %>" />                            
-                                    <button class="sumar-restar-boton" type="submit"> Agregar </button>
-                                </div>
-                           
+                                    <button class="agregar-boton" type="submit"> Agregar </button>
+                                </div>                           
                         </form>           
                        
                         <div class="d-flex ">
