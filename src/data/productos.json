@@ -177,7 +177,7 @@
     "descripcion": "Vestido en excelente estado. ",
     "talle": "m",
     "medidas": "Largo: 60cm.  Cintura: 50cm",
-    "imagen": ["vestido_ging.png"],
+    "imagen": ["vestidoGing.png"],
     "destacados": false,
     "descuento": 0
   },
@@ -190,7 +190,7 @@
     "descripcion": "Tapado en excelente estado. ",
     "talle": "m",
     "medidas": "Largo: 90cm.  Cintura: 80cm",
-    "imagen": ["tapado_ging.png"],
+    "imagen": ["tapadoGing.png"],
     "destacados": true,
     "descuento": 0
   },
